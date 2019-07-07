@@ -17,7 +17,7 @@ class DataInputStream:
 
     def read_unsigned_byte(self):
         return struct.unpack('B', self.stream.read(1))[0]
-    
+
     def read_char(self):
         return chr(struct.unpack('>H', self.stream.read(2))[0])
 
@@ -42,3 +42,6 @@ class DataInputStream:
 
     def read_int(self):
         return struct.unpack('>i', self.stream.read(4))[0]
+
+    def read_unsigned_int(self):
+        return struct.unpack('>I', self.stream.read(4))[0]
